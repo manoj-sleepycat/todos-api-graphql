@@ -7,7 +7,8 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 5.times do |i|
-  todo = Todo.create(title: "my title #{i+1}", created_by: "Author #{i+1}")
+  Todo.create(title: "my title #{i+1}", created_by: "Author #{i+1}")
+  todo = Todo.last
   4.times do |j|
     todo.items.create(name: "my item #{j+1}", done: false)
   end
